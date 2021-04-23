@@ -20,13 +20,13 @@ def celciustofarenheit():
     s = int(input("Enter the farehneit : "))
     f = float(s)
     c = (f - 32) * 5/9
-    print(c)
+    print("The farenheit of {} is {} celcius ".format(f,c))
 
 def farenheittocelius():
-    s = int(input("Enter the farehneit : "))
-    f = float(s)
-    c = (f - 32) * 5/9
-    print(c)
+    s = int(input("Enter the celcius : "))
+    c = float(s)
+    f = (c * 9 / 5) + 32 
+    print("The celcius of {} is {} farenheit".format(c,f))
 
 def operation():
     print("Please enter 1 for BMI Calculator")
