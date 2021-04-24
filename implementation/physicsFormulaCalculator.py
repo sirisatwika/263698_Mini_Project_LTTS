@@ -48,7 +48,17 @@ def operation():
     print("Please enter 3 for farenheit to celcius Calculator")
     print("Please enter 4 for Speed Calculation")
     print("Please enter 5 for acceleration  Calculation")
-    print("Please enter 6 to stop")
+    print("Please enter 6 for density Calculator")
+    print("Please enter 7 for force Calculator")
+    print("Please enter 8 for power to celcius Calculator")
+    print("Please enter 9 for weight Calculation")
+    print("Please enter 10 for pressure  Calculation")
+    print("Please enter 11 for kinetic Energy  Calculation")
+    print("Please enter 12 for ohms  Calculation")
+    print("Please enter 13 for frequency  Calculation")
+    print("Please enter 14 for kmph to m/s  Conversion")
+    print("Please enter 15 for m/s to kmph Conversion")
+    print("Please enter any key to stop")
     num = input("Enter the number according to the formula you want : ")
     if(num == "1"):
         bmicalci() 
@@ -60,6 +70,26 @@ def operation():
         cal_speed()    
     elif(num == "5"):
         cal_acceleration()
+    elif(num == "6"):
+        cal_density() 
+    elif(num == "7"):
+        cal_force()
+    elif(num == "8"):
+        cal_power()
+    elif(num == "9"):
+        cal_weight()    
+    elif(num == "10"):
+        cal_pressure()
+    elif(num == "11"):
+        cal_Kineticenergy() 
+    elif(num == "12"):
+        cal_ohmslaw()
+    elif(num == "13"):
+        cal_frequency()
+    elif(num == "14"):
+        con_kmph_ms()    
+    elif(num == "15"):
+        con_ms_kmph()
     else:
         exit(1)
     return True
