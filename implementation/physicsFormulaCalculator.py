@@ -57,13 +57,14 @@ def operation():
         cal_speed()    
     elif(num == 5):
         cal_acceleration()
-    else:
-        exit
-    return
+    elif(num >= 6):
+        return False
+    return False
 
 def main():
-    while(True):
-        operation()
+    ans = True
+    while(ans):
+        ans = operation()
 
 if __name__ == "__main__":
     main()
