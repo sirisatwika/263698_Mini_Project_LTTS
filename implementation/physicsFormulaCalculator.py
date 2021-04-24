@@ -49,16 +49,16 @@ def operation():
     print("Please enter 4 for Speed Calculation")
     print("Please enter 5 for acceleration  Calculation")
     print("Please enter 6 to stop")
-    num = int(input("Enter the number according to the formula you want : "))
-    if(num == 1):
+    num = input("Enter the number according to the formula you want : ")
+    if(num == "1"):
         bmicalci() 
-    elif(num == 2):
+    elif(num == "2"):
         celciustofarenheit()
-    elif(num == 3):
+    elif(num == "3"):
         farenheittocelius()
-    elif(num == 4):
+    elif(num == "4"):
         cal_speed()    
-    elif(num == 5):
+    elif(num == "5"):
         cal_acceleration()
     else:
         exit(1)
