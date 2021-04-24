@@ -46,6 +46,9 @@ def operation():
     print("Please enter 1 for BMI Calculator")
     print("Please enter 2 for celcius to farenheit Calculator")
     print("Please enter 3 for farenheit to celcius Calculator")
+    print("Please enter 4 for Speed Calculation")
+    print("Please enter 5 for acceleration  Calculation")
+    print("Please enter 6 to stop")
     num = int(input("Enter the number according to the formula you want : "))
     if(num == 1):
         bmicalci() 
@@ -57,13 +60,14 @@ def operation():
         cal_speed()    
     elif(num == 5):
         cal_acceleration()
-    elif(num >= 6):
-        return False
-    return False
+    else:
+        exit(1)
+    return True
 
 def main():
     ans = True
     while(ans):
+        ans = False
         ans = operation()
 
 if __name__ == "__main__":
