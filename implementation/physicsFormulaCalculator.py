@@ -14,7 +14,8 @@ def bmicalci():
         elif(BMI<=30):
             print("you are overweight")
         else: print("you are severely overweight")
-    else:("enter valid details")
+    else:
+        print("enter valid details")
 
 def celciustofarenheit():
     s = int(input("Enter the farehneit : "))
@@ -28,6 +29,19 @@ def farenheittocelius():
     f = (c * 9 / 5) + 32 
     print("The celcius of {} is {} farenheit".format(c,f))
 
+def cal_speed():
+    dist = float(input("Enter the distance"))
+    time = float(input("Enter the time"))
+    ans = dist / time
+    print("The speed is  : ", ans)
+
+def cal_acceleration():
+    initialVelocity = float(input("Enter the initial velocity"))
+    finalVelocity = float(input("Enter the final velocity"))
+    time = float(int(input("Enter the time")))
+    acceleration = (finalVelocity - initialVelocity) / time
+    print("Acceleration = ", acceleration)
+
 def operation():
     print("Please enter 1 for BMI Calculator")
     print("Please enter 2 for celcius to farenheit Calculator")
@@ -39,10 +53,12 @@ def operation():
         celciustofarenheit()
     elif(num == 3):
         farenheittocelius()
-    # elif num == 4:
-       # performIntegerDivision()
-    #elif num == 5:
-     #   performMultiplication()
+    elif(num == 4):
+        cal_speed()    
+    elif(num == 5):
+        cal_acceleration()
+    else:
+        exit
     return
 
 def main():
