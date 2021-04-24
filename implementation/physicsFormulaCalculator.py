@@ -6,99 +6,99 @@ def bmicalci():
     print("your Body Mass Index is: ",BMI)
     if(BMI>0):
         if(BMI<=16):
-            print("you are severely underweight")
+            print("you are severely underweight\n")
         elif(BMI<=18.5):
-            print("you are underweight")
+            print("you are underweight\n")
         elif(BMI<=25):
-            print("you are Healthy")
+            print("you are Healthy\n")
         elif(BMI<=30):
-            print("you are overweight")
-        else: print("you are severely overweight")
+            print("you are overweight\n")
+        else: print("you are severely overweight\n")
     else:
-        print("enter valid details")
+        print("enter valid details\n")
 
 def celciustofarenheit():
     s = int(input("Enter the farehneit : "))
     f = float(s)
     c = (f - 32) * 5/9
-    print("The farenheit of {} is {} celcius ".format(f,c))
+    print("The farenheit of {} is {} celcius \n".format(f,c))
 
 def farenheittocelius():
     s = int(input("Enter the celcius : "))
     c = float(s)
     f = (c * 9 / 5) + 32 
-    print("The celcius of {} is {} farenheit".format(c,f))
+    print("The celcius of {} is {} farenheit\n".format(c,f))
 
 def cal_speed():
-    dist = float(input("Enter the distance"))
-    time = float(input("Enter the time"))
+    dist = float(input("Enter the distance : "))
+    time = float(input("Enter the time : "))
     ans = dist / time
-    print("The speed is  : ", ans)
+    print("The speed is  : {}\n".format(ans))
 
 def cal_acceleration():
-    initialVelocity = float(input("Enter the initial velocity"))
-    finalVelocity = float(input("Enter the final velocity"))
+    initialVelocity = float(input("Enter the initial velocity : "))
+    finalVelocity = float(input("Enter the final velocity : "))
     time = float(int(input("Enter the time")))
     acceleration = (finalVelocity - initialVelocity) / time
-    print("Acceleration = ", acceleration)
+    print("Acceleration = {}\n".format(acceleration))
 
 def cal_density():
-    mass = float(input("Enter the distance"))
-    volume = float(input("Enter the time"))
+    mass = float(input("Enter the distance : "))
+    volume = float(input("Enter the time : "))
     ans = mass / volume
-    print("The density is  : ", ans)
+    print("The density is  : {}\n".format(ans))
 
 def cal_force():
-    mass = float(input("Enter the Mass of the body "))
-    acc = float(input("Enter the Acceleration in velocity available "))
+    mass = float(input("Enter the Mass of the body : "))
+    acc = float(input("Enter the Acceleration in velocity available : "))
     ans = mass * acc
-    print("The force is  : ", ans)
+    print("The force is  : {}\n".format(ans))
 
 def cal_power():
-    work = float(input("Enter the work"))
-    time = float(input("Enter the time"))
+    work = float(input("Enter the work : "))
+    time = float(input("Enter the time : "))
     ans = work / time
-    print("The power is  : ", ans)
+    print("The power is  : {}\n".format(ans))
 
 def cal_weight():
-    mass = float(input("Enter the Mass of the body"))
-    acc = float(input("Enter the Acceleration due to gravity"))
+    mass = float(input("Enter the Mass of the body : "))
+    acc = float(input("Enter the Acceleration due to gravity : "))
     ans = mass * acc
-    print("The weight is  : ", ans)
+    print("The weight is  : {}\n".format(ans))
 
 def cal_pressure():
-    force = float(input("Enter the Force applied"))
-    area = float(input("Enter the Total Area of the object"))
+    force = float(input("Enter the Force applied : "))
+    area = float(input("Enter the Total Area of the object : "))
     ans = force / area
-    print("The pressure is  : ", ans)
+    print("The pressure is  : {}\n".format(ans))
 
 def cal_Kineticenergy():
-    mass = float(input("Enter the Mass of the body"))
-    velocity = float(input("Enter The velocity with which the body is traveling"))
+    mass = float(input("Enter the Mass of the body : "))
+    velocity = float(input("Enter The velocity with which the body is traveling : "))
     ans = (mass * velocity * velocity) / 2
-    print("The pressure is  : ", ans)
+    print("The pressure is  : {}\n".format(ans))
 
 def cal_ohmslaw():
-    current = float(input("Enter the Mass of the body"))
-    resistance = float(input("Enter The velocity with which the body is traveling"))
+    current = float(input("Enter the Mass of the body : "))
+    resistance = float(input("Enter The velocity with which the body is traveling : "))
     ans = current * resistance
-    print("The ohms is  : ", ans)
+    print("The ohms is  : {}\n".format(ans))
 
 def cal_frequency():
-    velocity = float(input("Enter the Velocity "))
-    wavelength = float(input("Enter the wavelength of the wave"))
+    velocity = float(input("Enter the Velocity : "))
+    wavelength = float(input("Enter the wavelength of the wave : "))
     ans = velocity / wavelength
-    print("The ohms is  : ", ans)
+    print("The ohms is  : {}\n".format(ans))
 
 def con_kmph_ms():
-    kmph = float(input("Enter the kmph "))
+    kmph = float(input("Enter the kmph : "))
     mps =  0.27777777777 * kmph
-    print("The conversion from kmmph to ms is " , mps)
+    print("The conversion from kmmph to ms is {}\n".format(mps))
 
 def con_ms_kmph():
-    mps = float(input("Enter the mps "))
+    mps = float(input("Enter the mps : "))
     kmph = mps * 3.6
-    print("The conversion from mps to kmph is " , kmph)
+    print("The conversion from mps to kmph is {}\n".format(kmph))
 
 def operation():
     print("Please enter 1 for BMI Calculator")
