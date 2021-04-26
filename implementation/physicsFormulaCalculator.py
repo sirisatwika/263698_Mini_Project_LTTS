@@ -33,7 +33,11 @@ def cal_speed():
     dist = float(input("Enter the distance : "))
     time = float(input("Enter the time : "))
     ans = dist / time
-    print("The speed is  : {}\n".format(ans))
+    with open("Memory.txt","w") as file:
+        file.write(str(ans))
+    exit(0)
+
+   # print("The speed is  : {}\n".format(ans))
 
 def cal_acceleration():
     initialVelocity = float(input("Enter the initial velocity : "))
