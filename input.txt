@@ -1,0 +1,16 @@
+Please enter 1 for BMI Calculator.
+Please enter 2 for celcius to farenheit Calculator
+Please enter 3 for farenheit to celcius Calculator
+Please enter 4 for Speed Calculation
+Please enter 5 for acceleration  Calculation
+Please enter 6 for density Calculator
+Please enter 7 for force Calculator
+Please enter 8 for power to celcius Calculator
+Please enter 9 for weight Calculation
+Please enter 10 for pressure  Calculation
+Please enter 11 for kinetic Energy  Calculation
+Please enter 12 for ohms  Calculation
+Please enter 13 for frequency  Calculation
+Please enter 14 for kmph to m/s  Conversion
+Please enter 15 for m/s to kmph Conversion
+Please enter any key to stop

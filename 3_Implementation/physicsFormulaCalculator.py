@@ -1,14 +1,6 @@
-def resultfun(ans):
-    with open("output.txt","w") as file:
-        file.write(str(ans))
-    exit(0)
-    
-def bmicalci():
-    Height = float(input("Enter your height in centimeters: "))
-    Weight = float(input("Enter your Weight in Kg: "))
+def bmicalci(Height,Weight):
     Height = Height/100
     BMI=Weight/(Height*Height)
-    resultfun(BMI)
     if(BMI>0):
         if(BMI<=16):
             print("you are severely underweight\n")
@@ -21,39 +13,32 @@ def bmicalci():
         else: print("you are severely overweight\n")
     else:
         print("enter valid details\n")
+    return BMI
 
-def celciustofarenheit():
-    s = int(input("Enter the farehneit : "))
+def celciustofarenheit(s):
     f = float(s)
     c = (f - 32) * 5/9
-    resultfun(c)
+    return c
 
-def farenheittocelius():
-    s = int(input("Enter the celcius : "))
+def farenheittocelius(s):
     c = float(s)
     f = (c * 9 / 5) + 32 
-    resultfun(f)
+    return f
 
-def cal_speed():
-    dist = float(input("Enter the distance : "))
-    time = float(input("Enter the time : "))
+def cal_speed(dist,time):
     ans = dist / time
-    resultfun(ans)
+    return ans
 
-def cal_acceleration():
-    initialVelocity = float(input("Enter the initial velocity : "))
-    finalVelocity = float(input("Enter the final velocity : "))
+def cal_acceleration(initialVelocity,finalVelocity):
     time = float(int(input("Enter the time")))
     acceleration = (finalVelocity - initialVelocity) / time
-    resultfun(acceleration)
+    return acceleration
 
-def cal_density():
-    mass = float(input("Enter the distance : "))
-    volume = float(input("Enter the time : "))
+def cal_density(mass,volume):
     ans = mass / volume
-    resultfun(ans)
+    return ans
 
-def cal_force():
+def cal_force(mass,acc):
     mass = float(input("Enter the Mass of the body : "))
     acc = float(input("Enter the Acceleration in velocity available : "))
     ans = mass * acc
@@ -96,6 +81,7 @@ def cal_frequency():
     resultfun(ans)
 
 def con_kmph_ms():
+    
     kmph = float(input("Enter the kmph : "))
     mps =  0.27777777777 * kmph
     resultfun(mps)
@@ -106,35 +92,31 @@ def con_ms_kmph():
     resultfun(kmph)
 
 def operation():
-    print("Please enter 1 for BMI Calculator")
-    print("Please enter 2 for celcius to farenheit Calculator")
-    print("Please enter 3 for farenheit to celcius Calculator")
-    print("Please enter 4 for Speed Calculation")
-    print("Please enter 5 for acceleration  Calculation")
-    print("Please enter 6 for density Calculator")
-    print("Please enter 7 for force Calculator")
-    print("Please enter 8 for power to celcius Calculator")
-    print("Please enter 9 for weight Calculation")
-    print("Please enter 10 for pressure  Calculation")
-    print("Please enter 11 for kinetic Energy  Calculation")
-    print("Please enter 12 for ohms  Calculation")
-    print("Please enter 13 for frequency  Calculation")
-    print("Please enter 14 for kmph to m/s  Conversion")
-    print("Please enter 15 for m/s to kmph Conversion")
-    print("Please enter any key to stop")
+    with open("input.txt") as f: 
+        print(f.read())
     num = input("Enter the number according to the formula you want : ")
     if(num == "1"):
-        bmicalci() 
+        Height = float(input("Enter your height in centimeters: "))
+        Weight = float(input("Enter your Weight in Kg: "))
+        print(bmicalci(Height,Weight)) 
     elif(num == "2"):
-        celciustofarenheit()
+        s = int(input("Enter the farehneit : "))
+        print(celciustofarenheit(s))
     elif(num == "3"):
-        farenheittocelius()
+        s = int(input("Enter the celcius : "))
+        print(farenheittocelius(s))
     elif(num == "4"):
-        cal_speed()    
+        dist = float(input("Enter the distance : "))
+        time = float(input("Enter the time : "))
+        print(cal_speed(dist,time))    
     elif(num == "5"):
-        cal_acceleration()
+        initialVelocity = float(input("Enter the initial velocity : "))
+        finalVelocity = float(input("Enter the final velocity : "))
+        print(cal_acceleration(initialVelocity,finalVelocity))
     elif(num == "6"):
-        cal_density() 
+        mass = float(input("Enter the distance : "))
+        volume = float(input("Enter the time : "))
+        print(cal_density(mass,volume)) 
     elif(num == "7"):
         cal_force()
     elif(num == "8"):
