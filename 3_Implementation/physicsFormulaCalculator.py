@@ -60,24 +60,19 @@ def cal_Kineticenergy(mass,velocity):
 
 def cal_ohmslaw(current,resistance):
     ans = current * resistance
-    resultfun(ans)
+    return ans
 
-def cal_frequency():
-    velocity = float(input("Enter the Velocity : "))
-    wavelength = float(input("Enter the wavelength of the wave : "))
+def cal_frequency(velocity,wavelength):
     ans = velocity / wavelength
-    resultfun(ans)
+    return ans
 
-def con_kmph_ms():
-    
-    kmph = float(input("Enter the kmph : "))
+def con_kmph_ms(kmph):
     mps =  0.27777777777 * kmph
-    resultfun(mps)
+    return mps
 
-def con_ms_kmph():
-    mps = float(input("Enter the mps : "))
+def con_ms_kmph(mps):
     kmph = mps * 3.6
-    resultfun(kmph)
+    return kmph
 
 def operation():
     with open("input.txt") as f: 
@@ -115,7 +110,7 @@ def operation():
         print(cal_power(work,time))
     elif(num == "9"):
         mass = float(input("Enter the Mass of the body : "))
-    a   acc = float(input("Enter the Acceleration due to gravity : "))
+        acc = float(input("Enter the Acceleration due to gravity : "))
         cal_weight(mass,acc)    
     elif(num == "10"):
         force = float(input("Enter the Force applied : "))
@@ -130,11 +125,15 @@ def operation():
         resistance = float(input("Enter The velocity with which the body is traveling : "))
         print(cal_ohmslaw(current,resistance))
     elif(num == "13"):
-        cal_frequency()
+        velocity = float(input("Enter the Velocity : "))
+        wavelength = float(input("Enter the wavelength of the wave : "))
+        print(cal_frequency(velocity,wavelength))
     elif(num == "14"):
-        con_kmph_ms()    
+        kmph = float(input("Enter the kmph : "))
+        print(con_kmph_ms(kmph))    
     elif(num == "15"):
-        con_ms_kmph()
+        mps = float(input("Enter the mps : "))
+        print(con_ms_kmph(mps))
     else:
         exit(1)
     return True
