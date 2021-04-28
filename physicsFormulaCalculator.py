@@ -29,8 +29,8 @@ def cal_speed(dist,time):
     ans = dist / time
     return ans
 
-def cal_acceleration(initialVelocity,finalVelocity):
-    time = float(int(input("Enter the time")))
+def cal_acceleration(initialVelocity,finalVelocity,time):
+    
     acceleration = (finalVelocity - initialVelocity) / time
     return acceleration
 
@@ -103,6 +103,7 @@ def operation():
     elif(num == "5"):
         initialVelocity = float(input("Enter the initial velocity : "))
         finalVelocity = float(input("Enter the final velocity : "))
+        time = float(int(input("Enter the time : ")))
         print(cal_acceleration(initialVelocity,finalVelocity))
     elif(num == "6"):
         mass = float(input("Enter the distance : "))
