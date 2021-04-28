@@ -66,6 +66,14 @@ def cal_frequency(velocity,wavelength):
     ans = velocity / wavelength
     return ans
 
+def capacitance(charge,voltage):
+    ans = charge / voltage
+    return ans
+
+def gravity(mass1,mass2,distance):
+    grav = (6.674 * 10E-11 * mass1 * mass2) / distance
+    return grav
+
 def con_kmph_ms(kmph):
     mps =  0.27777777777 * kmph
     return mps
@@ -129,9 +137,18 @@ def operation():
         wavelength = float(input("Enter the wavelength of the wave : "))
         print(cal_frequency(velocity,wavelength))
     elif(num == "14"):
+        charge = float(input("Enter the Charge : "))
+        voltage = float(input("Enter the Voltage : "))
+        print(capacitance(charge,voltage))    
+    elif(num == "15"):
+        mass1 = float(input("Enter the mass of the first Object : "))
+        mass2 = float(input("Enter the mass of the second object : "))
+        distance = float(input("Enter the distance between the object : "))
+        print(gravity(mass1,mass2,distance))
+    elif(num == "16"):
         kmph = float(input("Enter the kmph : "))
         print(con_kmph_ms(kmph))    
-    elif(num == "15"):
+    elif(num == "17"):
         mps = float(input("Enter the mps : "))
         print(con_ms_kmph(mps))
     else:
