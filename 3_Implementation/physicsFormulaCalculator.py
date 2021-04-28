@@ -71,7 +71,7 @@ def capacitance(charge,voltage):
     return ans
 
 def gravity(mass1,mass2,distance):
-    grav = (6.674 * 10E-11 * mass1 * mass2) / distance
+    grav = ( mass1 * mass2) / distance
     return grav
 
 def con_kmph_ms(kmph):
@@ -144,7 +144,7 @@ def operation():
         mass1 = float(input("Enter the mass of the first Object : "))
         mass2 = float(input("Enter the mass of the second object : "))
         distance = float(input("Enter the distance between the object : "))
-        print(gravity(mass1,mass2,distance))
+        print("The gravity : {} G ".format(gravity(mass1,mass2,distance)))
     elif(num == "16"):
         kmph = float(input("Enter the kmph : "))
         print(con_kmph_ms(kmph))    
