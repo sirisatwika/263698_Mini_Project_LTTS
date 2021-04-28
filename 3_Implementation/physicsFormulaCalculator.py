@@ -39,38 +39,26 @@ def cal_density(mass,volume):
     return ans
 
 def cal_force(mass,acc):
-    mass = float(input("Enter the Mass of the body : "))
-    acc = float(input("Enter the Acceleration in velocity available : "))
     ans = mass * acc
-    resultfun(ans)
+    return ans
 
-def cal_power():
-    work = float(input("Enter the work : "))
-    time = float(input("Enter the time : "))
+def cal_power(work,time):
     ans = work / time
-    resultfun(ans)
+    return ans
 
-def cal_weight():
-    mass = float(input("Enter the Mass of the body : "))
-    acc = float(input("Enter the Acceleration due to gravity : "))
+def cal_weight(mass,acc):
     ans = mass * acc
-    resultfun(ans)
+    return ans
 
-def cal_pressure():
-    force = float(input("Enter the Force applied : "))
-    area = float(input("Enter the Total Area of the object : "))
+def cal_pressure(force,area):
     ans = force / area
-    resultfun(ans)
+    return ans
 
-def cal_Kineticenergy():
-    mass = float(input("Enter the Mass of the body : "))
-    velocity = float(input("Enter The velocity with which the body is traveling : "))
+def cal_Kineticenergy(mass,velocity):
     ans = (mass * velocity * velocity) / 2
-    resultfun(ans)
+    return ans
 
-def cal_ohmslaw():
-    current = float(input("Enter the Mass of the body : "))
-    resistance = float(input("Enter The velocity with which the body is traveling : "))
+def cal_ohmslaw(current,resistance):
     ans = current * resistance
     resultfun(ans)
 
@@ -118,17 +106,29 @@ def operation():
         volume = float(input("Enter the time : "))
         print(cal_density(mass,volume)) 
     elif(num == "7"):
-        cal_force()
+        mass = float(input("Enter the Mass of the body : "))
+        acc = float(input("Enter the Acceleration in velocity available : "))
+        print(cal_force(mass,acc))
     elif(num == "8"):
-        cal_power()
+        work = float(input("Enter the work : "))
+        time = float(input("Enter the time : "))
+        print(cal_power(work,time))
     elif(num == "9"):
-        cal_weight()    
+        mass = float(input("Enter the Mass of the body : "))
+    a   acc = float(input("Enter the Acceleration due to gravity : "))
+        cal_weight(mass,acc)    
     elif(num == "10"):
-        cal_pressure()
+        force = float(input("Enter the Force applied : "))
+        area = float(input("Enter the Total Area of the object : "))
+        print(cal_pressure(force,area))
     elif(num == "11"):
-        cal_Kineticenergy() 
+        mass = float(input("Enter the Mass of the body : "))
+        velocity = float(input("Enter The velocity with which the body is traveling : "))
+        print(cal_Kineticenergy(mass,velocity)) 
     elif(num == "12"):
-        cal_ohmslaw()
+        current = float(input("Enter the Mass of the body : "))
+        resistance = float(input("Enter The velocity with which the body is traveling : "))
+        print(cal_ohmslaw(current,resistance))
     elif(num == "13"):
         cal_frequency()
     elif(num == "14"):
