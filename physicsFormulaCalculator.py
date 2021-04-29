@@ -120,7 +120,7 @@ def operation():
     elif(num == "9"):
         mass = float(input("Enter the Mass of the body : "))
         acc = float(input("Enter the Acceleration due to gravity : "))
-        cal_weight(mass,acc)    
+        print(cal_weight(mass,acc))
     elif(num == "10"):
         force = float(input("Enter the Force applied : "))
         area = float(input("Enter the Total Area of the object : "))
@@ -130,8 +130,8 @@ def operation():
         velocity = float(input("Enter The velocity with which the body is traveling : "))
         print(cal_Kineticenergy(mass,velocity)) 
     elif(num == "12"):
-        current = float(input("Enter the Mass of the body : "))
-        resistance = float(input("Enter The velocity with which the body is traveling : "))
+        current = float(input("Enter the current : "))
+        resistance = float(input("Enter The resistance : "))
         print(cal_ohmslaw(current,resistance))
     elif(num == "13"):
         velocity = float(input("Enter the Velocity : "))
