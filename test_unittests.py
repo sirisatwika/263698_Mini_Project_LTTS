@@ -3,12 +3,14 @@ import physicsFormulaCalculator
 
 class TestCalc(unittest.TestCase):
     def test_bmicalc(self):
-        res = physicsFormulaCalculator.bmicalci(167.64,63)
+        res = physicsFormulaCalculator.bmicalci(63,167.64)
         self.assertEqual(res,22.41740020670124)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.bmicalci,10,0)
 
     def test_celciustofarenheit(self):
         res = physicsFormulaCalculator.celciustofarenheit(63)
         self.assertEqual(res,17.22222222222222)
+        
 
     def test_farenheittocelius(self):
         res = physicsFormulaCalculator.farenheittocelius(100)
@@ -17,14 +19,17 @@ class TestCalc(unittest.TestCase):
     def test_cal_speed(self):
         res = physicsFormulaCalculator.cal_speed(125,60)
         self.assertEqual(res,2.0833333333333335)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.cal_speed,10,0)
 
     def test_cal_acceleration(self):
         res = physicsFormulaCalculator.cal_acceleration(3,5,5)
         self.assertEqual(res,0.4)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.cal_acceleration,10,10,0)
 
     def test_cal_density(self):
         res = physicsFormulaCalculator.cal_density(168,29)
         self.assertEqual(res,5.793103448275862)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.cal_density,10,0)
         
     def test_cal_force(self):
         res = physicsFormulaCalculator.cal_force(50,5)
@@ -33,6 +38,7 @@ class TestCalc(unittest.TestCase):
     def test_cal_power(self):
         res = physicsFormulaCalculator.cal_power(300,10)
         self.assertEqual(res,30.0)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.cal_power,10,0)
     
     def test_cal_weight(self):
         res = physicsFormulaCalculator.cal_weight(60,1.625)
@@ -41,6 +47,7 @@ class TestCalc(unittest.TestCase):
     def test_cal_pressure(self):
         res = physicsFormulaCalculator.cal_pressure(50,20)
         self.assertEqual(res,2.5)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.cal_pressure,10,0)
 
     def test_cal_Kineticenergy(self):
         res = physicsFormulaCalculator.cal_Kineticenergy(60,6)
@@ -53,14 +60,17 @@ class TestCalc(unittest.TestCase):
     def test_cal_frequency(self):
         res = physicsFormulaCalculator.cal_frequency(70,15)
         self.assertEqual(res,4.666666666666667)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.cal_frequency,10,0)
 
     def test_capacitance(self):
         res = physicsFormulaCalculator.capacitance(50,6)
         self.assertEqual(res,8.333333333333334) 
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.capacitance,10,0)
 
     def test_gravity(self):
         res = physicsFormulaCalculator.gravity(70,80,20)
         self.assertEqual(res,280.0)
+        self.assertRaises(ZeroDivisionError, physicsFormulaCalculator.gravity,10,10,0)
 
     def test_con_kmph_ms(self):
         res = physicsFormulaCalculator.con_kmph_ms(40)

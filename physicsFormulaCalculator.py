@@ -1,4 +1,4 @@
-def bmicalci(Height,Weight):
+def bmicalci(Weight,Height):
     Height = Height/100
     BMI=Weight/(Height*Height)
     if(BMI>0):
@@ -29,8 +29,7 @@ def cal_speed(dist,time):
     ans = dist / time
     return ans
 
-def cal_acceleration(initialVelocity,finalVelocity,time):
-    
+def cal_acceleration(initialVelocity,finalVelocity,time): 
     acceleration = (finalVelocity - initialVelocity) / time
     return acceleration
 
@@ -87,8 +86,8 @@ def operation():
         print(f.read())
     num = input("Enter the number according to the formula you want : ")
     if(num == "1"):
-        Height = float(input("Enter your height in centimeters: "))
         Weight = float(input("Enter your Weight in Kg: "))
+        Height = float(input("Enter your height in centimeters: "))
         print(bmicalci(Height,Weight)) 
     elif(num == "2"):
         s = int(input("Enter the farehneit : "))
