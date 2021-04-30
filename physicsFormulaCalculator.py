@@ -1,18 +1,6 @@
 def bmicalci(Weight,Height):
     Height = Height/100
     BMI=Weight/(Height*Height)
-    if(BMI>0):
-        if(BMI<=16):
-            print("you are severely underweight\n")
-        elif(BMI<=18.5):
-            print("you are underweight\n")
-        elif(BMI<=25):
-            print("you are Healthy\n")
-        elif(BMI<=30):
-            print("you are overweight\n")
-        else: print("you are severely overweight\n")
-    else:
-        print("enter valid details\n")
     return BMI
 
 def celciustofarenheit(s):
