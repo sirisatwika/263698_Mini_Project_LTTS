@@ -1,70 +1,156 @@
+'''
+@Brief: Function to calculate BMI
+@Parameter : float operand1, float operand2
+@return: Calculated value of BMI
+'''
 def bmicalci(Weight,Height):
     Height = Height/100
     BMI=Weight/(Height*Height)
     return BMI
 
+'''
+@Brief: Function to convert celcius to farenheit
+@Parameter : float operand1
+@return: calculated value of farenheit 
+'''
 def celciustofarenheit(s):
     f = float(s)
     c = (f - 32) * 5/9
     return c
 
+
+'''
+@Brief: Function to convert farenheit to celcius
+@Parameter : float operand1
+@return: calculated value of celcius
+'''
 def farenheittocelius(s):
     c = float(s)
     f = (c * 9 / 5) + 32 
     return f
 
+'''
+@Brief: Function to calculate speed
+@Parameter : float operand1, float operand2
+@return: Calculated value of speed
+'''
 def cal_speed(dist,time):
     ans = dist / time
     return ans
 
+'''
+@Brief: Function to calculate BMI
+@Parameter : float operand1, float operand2, float operand3
+@return: Calculated value of acceleration
+'''
 def cal_acceleration(initialVelocity,finalVelocity,time): 
     acceleration = (finalVelocity - initialVelocity) / time
     return acceleration
 
+'''
+@Brief: Function to calculate density
+@Parameter : float operand1, float operand2
+@return: Calculated value of density
+'''
 def cal_density(mass,volume):
     ans = mass / volume
     return ans
 
+'''
+@Brief: Function to calculate force
+@Parameter : float operand1, float operand2
+@return: Calculated value of force
+'''
 def cal_force(mass,acc):
     ans = mass * acc
     return ans
 
+'''
+@Brief: Function to calculate power
+@Parameter : float operand1, float operand2
+@return: Calculated value of power
+'''
 def cal_power(work,time):
     ans = work / time
     return ans
 
+'''
+@Brief: Function to calculate weight
+@Parameter : float operand1, float operand2
+@return: Calculated value of weight
+'''
 def cal_weight(mass,acc):
     ans = mass * acc
     return ans
 
+'''
+@Brief: Function to calculate pressure
+@Parameter : float operand1, float operand2
+@return: Calculated value of pressure
+'''
 def cal_pressure(force,area):
     ans = force / area
     return ans
 
+'''
+@Brief: Function to calculate Kinetic energy
+@Parameter : float operand1, float operand2
+@return: Calculated value of Kinetic energy
+'''
 def cal_Kineticenergy(mass,velocity):
     ans = (mass * velocity * velocity) / 2
     return ans
 
+'''
+@Brief: Function to calculate ohms law
+@Parameter : float operand1, float operand2
+@return: Calculated value of ohms law
+'''
 def cal_ohmslaw(current,resistance):
     ans = current * resistance
     return ans
 
+'''
+@Brief: Function to calculate frequency
+@Parameter : float operand1, float operand2
+@return: Calculated value of frequency
+'''
 def cal_frequency(velocity,wavelength):
     ans = velocity / wavelength
     return ans
 
+'''
+@Brief: Function to calculate capacitance
+@Parameter : float operand1, float operand2
+@return: Calculated value of capacitance
+'''
 def capacitance(charge,voltage):
     ans = charge / voltage
     return ans
 
+'''
+@Brief: Function to calculate gravity
+@Parameter : float operand1, float operand2, float operand3
+@return: Calculated value of gravity
+'''
 def gravity(mass1,mass2,distance):
     grav = ( mass1 * mass2) / distance
     return grav
 
+'''
+@Brief: Function to convert kmph to mps
+@Parameter : float operand1
+@return: converted value is given i.e mps
+'''
 def con_kmph_ms(kmph):
     mps =  0.27777777777 * kmph
     return mps
 
+'''
+@Brief: Function to convert mps to kmph 
+@Parameter : float operand1
+@return: converted value is given i.e kmph
+'''
 def con_ms_kmph(mps):
     kmph = mps * 3.6
     return kmph
@@ -78,10 +164,10 @@ def operation():
         Height = float(input("Enter your height in centimeters: "))
         print(bmicalci(Height,Weight)) 
     elif(num == "2"):
-        s = int(input("Enter the farehneit : "))
+        s = float(input("Enter the farehneit : "))
         print(celciustofarenheit(s))
     elif(num == "3"):
-        s = int(input("Enter the celcius : "))
+        s = float(input("Enter the celcius : "))
         print(farenheittocelius(s))
     elif(num == "4"):
         dist = float(input("Enter the distance : "))
