@@ -172,12 +172,12 @@ def operation():
     elif(num == "4"):
         dist = float(input("Enter the distance : "))
         time = float(input("Enter the time : "))
-        print(cal_speed(dist,time))    
+        print("The speed is {} m/s".format(cal_speed(dist,time)))    
     elif(num == "5"):
         initialVelocity = float(input("Enter the initial velocity : "))
         finalVelocity = float(input("Enter the final velocity : "))
         time = float(int(input("Enter the time : ")))
-        print(cal_acceleration(initialVelocity,finalVelocity))
+        print("The acceleration is {} m/s2".format(cal_acceleration(initialVelocity,finalVelocity)))
     elif(num == "6"):
         mass = float(input("Enter the distance : "))
         volume = float(input("Enter the time : "))
