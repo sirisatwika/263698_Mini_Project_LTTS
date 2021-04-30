@@ -162,13 +162,13 @@ def operation():
     if(num == "1"):
         Weight = float(input("Enter your Weight in Kg: "))
         Height = float(input("Enter your height in centimeters: "))
-        print(bmicalci(Height,Weight)) 
+        print("The BMI index {} ".format(bmicalci(Height,Weight))) 
     elif(num == "2"):
         s = float(input("Enter the farehneit : "))
-        print(celciustofarenheit(s))
+        print("The conversion from celcius to farenheit and the farenheit value is {} F".format(celciustofarenheit(s)))
     elif(num == "3"):
         s = float(input("Enter the celcius : "))
-        print(farenheittocelius(s))
+        print("The conversion from farenheit to celcius and the Celcius value is {} C".format(farenheittocelius(s)))
     elif(num == "4"):
         dist = float(input("Enter the distance : "))
         time = float(input("Enter the time : "))
@@ -213,7 +213,7 @@ def operation():
     elif(num == "14"):
         charge = float(input("Enter the Charge : "))
         voltage = float(input("Enter the Voltage : "))
-        print(capacitance(charge,voltage))    
+        print("The capacitance : {} ".format(capacitance(charge,voltage)))    
     elif(num == "15"):
         mass1 = float(input("Enter the mass of the first Object : "))
         mass2 = float(input("Enter the mass of the second object : "))
